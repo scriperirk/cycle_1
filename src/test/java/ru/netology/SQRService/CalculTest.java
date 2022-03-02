@@ -2,20 +2,35 @@ package ru.netology.SQRService;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class CalculTest {
 
     @Test
-    void sqrtcalc() {
+    void sqrtcalchits() {
         Calcul service = new Calcul();
-        int num = 99;
-        int expected = 3;
-        int max = 200;
-        int min = 300;
+        int max = 300;
+        int min = 200;
 
-        int actual = service.sqrtcalc(num, max, min);
+        int actual = service.sqrtcalc(max, min);
+        System.out.println(actual);
+    }
 
-        //assertEquals(expected, actual);
+    @Test
+    void sqrtcalcdoesnotfall() {
+        Calcul service = new Calcul();
+        int max = 90;
+        int min = 50;
+
+        int actual = service.sqrtcalc(max, min);
+        System.out.println(actual);
+    }
+
+    @Test
+    void sqrtcalchitsone() {
+        Calcul service = new Calcul();
+        int max = 100;
+        int min = 50;
+
+        int actual = service.sqrtcalc(max, min);
+        System.out.println(actual);
     }
 }

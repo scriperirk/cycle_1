@@ -1,13 +1,16 @@
 package ru.netology.SQRService;
 
 public class Calcul {
-    public int sqrtcalc(int numder, int max, int min) {
+    public int sqrtcalc(int max, int min) {
         int score = 0;
-        for (int i = 10; i <= numder; i++)
-            if (i * i >= min | i * i <= max) {
-                score++;
-                return score;
+        int number = 99;
+        for (int i = 10; i <= number; i++) {
+            if (i * i >= min) {
+                if (i * i <= max) {
+                    score++;
+                }
             }
-        return 0;
+        }
+        return score;
     }
 }

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SQRServiceTest {
-    //все попадают в диапазон
+    //все попадают в диапазон от 200 до 300
     @Test
     void sqrtCalcHits() {
         SQRService service = new SQRService();
@@ -19,7 +19,7 @@ class SQRServiceTest {
         assertEquals(expected,actual);
     }
 
-    //ничего не попадает в диапазон
+    //ничего не попадает в диапазон от 50 до 90
     @Test
     void sqrtCalcDoesNotFall() {
         SQRService service = new SQRService();
@@ -33,7 +33,7 @@ class SQRServiceTest {
         assertEquals(expected,actual);
     }
 
-    //один попадает в диапазон
+    //один попадает в диапазон от 50 до 100
     @Test
     void sqrtCalcHitsOne() {
         SQRService service = new SQRService();

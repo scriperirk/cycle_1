@@ -1,8 +1,8 @@
 #out
 out/
 #idea
-.idea/
+.idea
 #target
 target/
 #iml
-.iml/
+.iml

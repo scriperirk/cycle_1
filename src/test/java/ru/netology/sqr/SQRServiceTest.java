@@ -1,19 +1,19 @@
-package ru.netology.SQRService;
+package ru.netology.sqr;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class CalculTest {
+class SQRServiceTest {
     //все попадают в диапазон
     @Test
-    void sqrtcalchits() {
-        Calcul service = new Calcul();
+    void sqrtCalcHits() {
+        SQRService service = new SQRService();
         int max = 300;
         int min = 200;
         int expected = 3;
 
-        int actual = service.sqrtcalc(max, min);
+        int actual = service.sqrtCalc(max, min);
         System.out.println(actual);
 
         assertEquals(expected,actual);
@@ -21,13 +21,13 @@ class CalculTest {
 
     //ничего не попадает в диапазон
     @Test
-    void sqrtcalcdoesnotfall() {
-        Calcul service = new Calcul();
+    void sqrtCalcDoesNotFall() {
+        SQRService service = new SQRService();
         int max = 90;
         int min = 50;
         int expected = 0;
 
-        int actual = service.sqrtcalc(max, min);
+        int actual = service.sqrtCalc(max, min);
         System.out.println(actual);
 
         assertEquals(expected,actual);
@@ -35,13 +35,13 @@ class CalculTest {
 
     //один попадает в диапазон
     @Test
-    void sqrtcalchitsone() {
-        Calcul service = new Calcul();
+    void sqrtCalcHitsOne() {
+        SQRService service = new SQRService();
         int max = 100;
         int min = 50;
         int expected = 1;
 
-        int actual = service.sqrtcalc(max, min);
+        int actual = service.sqrtCalc(max, min);
         System.out.println(actual);
         assertEquals(expected,actual);
     }
